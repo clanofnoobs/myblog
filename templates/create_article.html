@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Create a post {% endblock %}
+
+{% block content %}
+
+<form class="createform" action="/articles/create/" method="post" > {% csrf_token %}
+<ul>
+<label for="formtitle">  Title </label> </br>
+
+<li id ="formtitle" name="formtitle"> {{ form.title}} </li>
+<br>
+<br>
+<label for="formtitle"> Body </label>
+<li id ="formbody"> {{ form.body }}  </li>
+<br>
+<br>
+<label for="formtitle"> Date published </label>
+<li id="formdate"> {{ form.pub_date }} </li>
+<li> {{ form.likes }} </li>
+<br>
+<br>
+</ul>
+
+<input id="createarticleb" type="submit" name="submit" value="Create Article">
+</form>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

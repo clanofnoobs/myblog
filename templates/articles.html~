@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for article in articles %}
+<div class="articles">
+<div id="thetitle">
+<h1 id="title1" > <a id="title2" href="/articles/get/{{ article.id }}/"> {{ article.title }} </a> </h1>
+<div id= "pub_date"> <i>on</i> {{ article.pub_date }} </div>
+</div>
+
+<p> {{ article.body|safe|linebreaksbr }} </p>
+<br>
+<hr>
+</div>
+{% endfor %}
+
+{% if articles.object_list and articles.paginator.num_pages > 1 %}
+<div class="pagination">
+	<span class="step-links">
+		{% if articles.has_previous %}
+			<a href="?page={{ articles.previous_page_number }}" > newer entries &lt;&lt; </a>
+		{% endif %}
+		
+		<span class="current">
+			&nbsp;Page {{ articles.number }} of {{ articles.paginator.num_pages }}		
+		</span>
+		
+		{% if articles.has_next %}
+			<a href="?page={{ articles.next_page_number }}" > &gt;&gt; older entries </a>
+		{% endif %}
+	
+	</span>
+
+</div>
+{% endif %}
+
+{% endblock %}
+

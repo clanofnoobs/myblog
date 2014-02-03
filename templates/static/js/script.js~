@@ -1,0 +1,20 @@
+$(function (){
+ $("#admin1").click(function (){
+ 	
+ 	
+ 	$("#frame").fadeIn();
+ 	$("#headframe").fadeIn();
+ 	$("#overlay").fadeIn();
+ 	
+ 
+ });
+ $("#overlay").click(function(){
+	$("#frame").fadeOut(250);
+ 	$("#headframe").fadeOut(250);
+ 	$("#overlay").fadeOut(1000);
+
+ 
+ });
+
+
+});

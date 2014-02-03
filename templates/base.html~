@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<title>{% block title %} Sami's blog {% endblock %}</title>
+	<link href="/static/css/adminlogin.css" type="text/css"
+	rel="stylesheet"/>
+	
+	
+	<link href="/static/css/reset.css" type="text/css"
+	rel="stylesheet"/>
+	<link rel="stylesheet" href="/static/css/desert.css"/>
+	<link href="/static/css/home.css" type="text/css"
+	rel="stylesheet"/>
+	
+	
+<script type="text/javascript" src="/static/js/jquery-1.10.2.min.js">
+
+</script>
+<script type="text/javascript" src="/static/js/script.js">
+</script>
+ <script type="text/javascript" src="/static/highlighter/prettify.js" ></script>
+
+ 
+	
+	</head>
+	
+	
+	
+	<body>
+	<script> prettyPrint(); </script>
+		<div id="overlay"></div>
+		
+		<div id="head">
+		
+		<div class="nav pagewidth">
+	
+		
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+		<h1 id="sammy" > SAMMY </h1> 
+		
+		</a>
+		
+		
+		<a href="/articles/create">
+		<h2 id="addpost">add post</h2></a>
+		<h2 id="welcome"> welcome to my blog </h2>
+		<h5 id="about"> about </h5>
+	   	<h5 id="admin2" >Admin</h5> 
+	   	 
+	   
+	   	   
+		      </div>      
+		</div>
+		
+{% block container %}
+	<div class="container pagewidth">
+	  
+	    		{% block content %} 
+	    		<p>Hi</p>
+	    		
+	    		{% endblock %}
+        </div>
+      {% endblock %}
+        <script> prettyPrint(); </script>
+		<div id="loginModal">
+	
+<h4 id="frameborder">Admin login</h4>
+<div id="login">
+<form action="/auth" method="post"> 
+{% csrf_token %}
+<br>
+<label for="username">Username: </label>
+<input name="username" id="username" type="text" placeholder = "your username"/>
+<br>
+<br>
+<label for="password">Password: </label>
+<input name="password" id="password" type="password" placeholder = "your password"/>
+<br>
+<br>
+<button id="createarticleb">Sign in</button>
+</form>
+</div>	
+		</div>
+		
+	</body>
+	
+
+
+</html>
