@@ -64,7 +64,7 @@ cursor:pointer;
 	color: white;
    
 			font-family: sans-serif;
- font-size: 16px;      
+ font-size: 14px;      
         
         float:left;
     
@@ -83,7 +83,7 @@ border-right: 1px solid rgba(255,255,255,0);
 		padding-left: 5px;
 		padding-right: 5px;
      transition: border-left, border-right, 0.5s, ease-in-out;
-font-size: 14px;
+font-size: 12px;
 	 }
 	 
 #addpost:hover{
@@ -91,6 +91,7 @@ border-left: 1px solid rgba(255,255,255,0.5);
 border-right: 1px solid rgba(255,255,255,0.5);
 }
 #admin2{
+font-size:14px;
 color: lightgrey;
 font-family: sans-serif;
 
@@ -107,6 +108,7 @@ cursor: pointer;
 }
 
 #about{
+font-size:14px;
 color: lightgrey;
 font-family: sans-serif;
 
@@ -223,6 +225,10 @@ margin-top:5px;
  .nav #menub{
  margin-top:0px;
  }
+ .nav #menub hr{
+
+  float:none;
+ }
  .nav * { 
  margin-top:8.5px;
  float: left; 
@@ -327,16 +333,17 @@ display:block;
 }
 
 .footer, .container:after{
-height:200px;
+height:100px;
 margin-top:40px;
 padding-bottom:43px;
 }
 
 #menub{
+
 display:inline-block;
-background-color:white;
+background-color:#272727;
 height:48px;
-width:50px;
+width:45px;
 
 }
 #menub:hover{
@@ -347,22 +354,34 @@ text-align:center;
 width:160px;
 display:none;
 background-color:#272727;
-margin-top:48px;
+margin-top:0px;
 
 }
 #menu div{
 width:160px;
-border-bottom:3px solid rgba(0,0,0,1);
+border-bottom:2px solid rgba(0,0,0,1);
 text-align:center;
+margin-top:5px;
 
 transition: background-color 0.2s ease-in-out;
+}
+#menub hr{
+margin-top:6px;
+margin-left:20px;
+overflow:hidden;
+border:0px solid rgba(0,0,0,0.5);
+border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+#horizontal{
+      
 }
 #menu a{
 text-align:center;
 margin-left:6px;
 text-decoration:none;
-margin-bottom:10px;
-color:white;
+color:lightgrey;
+margin-top:13px;
+margin-bottom:13px;
 }
 
 #menu div:hover{
@@ -371,6 +390,7 @@ background-color:#1E90FF;
 #menu:hover{
 cursor:auto;
 }
+
 
 iframe{
 
@@ -402,4 +422,5 @@ box-shadow: 0px 0px 4px #888888;
 background-color:rgb(255,255,255);
 box-sizing: border-box;
 }
+
 

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Experiments
+{% endblock %}
+
+{% block heading %}
+My experiments 
+{% endblock %}
+
+
+{% block content %}
+
+<h1 id="title2"> </h1>
+

@@ -14,12 +14,10 @@
 	rel="stylesheet"/>
 	
 	
-<script type="text/javascript" src="/static/js/jquery-1.10.2.min.js">
-
-</script>
-<script type="text/javascript" src="/static/js/script.js">
-</script>
- <script type="text/javascript" src="/static/highlighter/prettify.js" ></script>
+<script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/highlighter/prettify.js" ></script>
+<script type="text/javascript" src = "/static/js/three.min.js"></script>
 
  
 	
@@ -34,19 +32,57 @@
 		<div id="head">
 		
 		<div class="nav pagewidth">
-	
+	    <div id="menub">
+                <div id="horizontal">
+                <hr>
+                <hr>
+                <hr>
+                </div>
+		<div id="menu">
+		<div>
+		<a href="/articles/home/">
+		Home
+		</a>
+		</div>
+		<div>
+		<a href="/articles/home/">
+		Photos
+		</a>
+		</div>
+		<div>
+		<a href="/articles/home/">
+		Projects
+		</a>
+		</div>
+		<div>
+		<a href="/articles/webgl/">
+		Experiments
+		</a>
+		</div>
 		
-		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-		<h1 id="sammy" > SAMMY </h1> 
+		<div>
+		<a href="/articles/home/">
+		Contact me
+		</a>
+		</div>
+		</div>
+		</div>
+		
+		
+		<a href="/articles/all/">
+		<h4 id="sammy" > SAMMY </h4> 
 		
 		</a>
 		
 		
 		<a href="/articles/create">
 		<h2 id="addpost">add post</h2></a>
-		<h2 id="welcome"> welcome to my blog </h2>
-		<h5 id="about"> about </h5>
-	   	<h5 id="admin2" >Admin</h5> 
+		<h2 id="welcome">
+                        {% block heading %}   welcome to my blog {% endblock %} 
+                </h2>
+		<h6 id="about"> about </h5>
+	   	<h6 id="admin2" >Admin</h5> 
+
 	   	 
 	   
 	   	   
@@ -61,6 +97,12 @@
 	    		
 	    		{% endblock %}
         </div>
+		{% block footer %}
+		<div class="footer"> 
+		
+		
+		</div>
+		{% endblock %}
       {% endblock %}
         <script> prettyPrint(); </script>
 		<div id="loginModal">

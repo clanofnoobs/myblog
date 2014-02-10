@@ -14,19 +14,15 @@
 	rel="stylesheet"/>
 	
 	
-<script type="text/javascript" src="/static/js/jquery-1.10.2.min.js">
-
-</script>
-<script type="text/javascript" src="/static/js/script.js">
-</script>
- <script type="text/javascript" src="/static/highlighter/prettify.js" ></script>
+<script type="text/javascript" src="/static/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+<script type="text/javascript" src="/static/highlighter/prettify.js" ></script>
+<script type="text/javascript" src = "/static/js/three.min.js"></script>
 
  
 	
-	</head>
-	
-	
-	
+	</head>	
+
 	<body>
 	<script> prettyPrint(); </script>
 		<div id="overlay"></div>
@@ -35,6 +31,11 @@
 		
 		<div class="nav pagewidth">
 	    <div id="menub">
+                <div id="horizontal">
+                <hr>
+                <hr>
+                <hr>
+                </div>
 		<div id="menu">
 		<div>
 		<a href="/articles/home/">
@@ -52,7 +53,7 @@
 		</a>
 		</div>
 		<div>
-		<a href="/articles/home/">
+		<a href="/articles/webgl/">
 		Experiments
 		</a>
 		</div>
@@ -74,9 +75,12 @@
 		
 		<a href="/articles/create">
 		<h2 id="addpost">add post</h2></a>
-		<h2 id="welcome"> welcome to my blog </h2>
-		<h5 id="about"> about </h5>
-	   	<h5 id="admin2" >Admin</h5> 
+		<h2 id="welcome">
+                        {% block heading %}   welcome to my blog {% endblock %} 
+                </h2>
+		<h6 id="about"> about </h5>
+	   	<h6 id="admin2" >Admin</h5> 
+
 	   	 
 	   
 	   	   

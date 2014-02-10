@@ -10,7 +10,7 @@ from django.core.context_processors import csrf
 
 def articles(request):
    articles = Article.objects.all().order_by("-pub_date")
-   paginator = Paginator(articles, 2)
+   paginator = Paginator(articles, 3)
 
    try: page = int(request.GET.get("page", '1'))
    except ValueError: page = 1
@@ -21,6 +21,9 @@ def articles(request):
        articles = paginator.page(paginator.num_pages)
 
    return render_to_response('articles.html', dict(articles=articles, user=request.user))
+
+def webgl(request):
+   return render_to_response("webgl.html")
    
 
 def article(request, article_id=1):
@@ -28,8 +31,8 @@ def article(request, article_id=1):
    
 
 def create(request):
-    if request.POST:
-        form = ArticleForm(request.POST, request.FILES)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
         if form.is_valid():
             form.save()
         
