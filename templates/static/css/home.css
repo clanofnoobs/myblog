@@ -321,16 +321,6 @@ transition: color 0.2s ease-in-out;
 color:black;
 }
 
-.footer{
-width:100%;
-background:#272727;
-z-index:50;
-}	
-.container:after{
-
-display:block;
-
-}
 
 .footer, .container:after{
 height:100px;

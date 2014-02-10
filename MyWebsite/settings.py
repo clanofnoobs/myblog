@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'MyWebsite.wsgi.application'
 
 TEMPLATE_DIRS = (
 
-"/home/sami/Desktop/django1/MyWebsite/templates/"
+"/website/MyWebsite/templates/"
     
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -122,11 +122,14 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 	'article',
 	'gunicorn',
+	
     # Uncomment the next line to enable the admin:
      'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
