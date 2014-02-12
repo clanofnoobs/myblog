@@ -7,6 +7,11 @@ background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 5
 background-size: 50px 50px;
 	text-align: center;
 	}
+#disqus_thread{
+width:75%;
+margin:0px auto;
+padding-bottom:10px;
+}
 	
 
 #overlay{
@@ -382,12 +387,6 @@ cursor:auto;
 }
 
 
-iframe{
-
-left:45%;
-text-align:center;
-margin-left:150px;
-}
 .comments{
 
 color: rgba(0,0,0,0.45);
