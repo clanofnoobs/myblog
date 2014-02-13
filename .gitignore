@@ -1,4 +1,5 @@
 settings.py
+*.py.swp
 settings.py~
 .settings.py.swp
 settings.pyc
