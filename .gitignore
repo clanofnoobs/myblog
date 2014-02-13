@@ -1,3 +1,7 @@
 settings.py
+settings.py~
+.settings.py.swp
 settings.pyc
 *.swp
+MyWebsite/.settings.py.swp
+MyWebsite/settings.py~
