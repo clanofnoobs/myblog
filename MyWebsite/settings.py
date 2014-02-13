@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'mydb',                      # Or path to database file if using sqlite3.
+        'NAME': 'blog',                      # Or path to database file if using sqlite3.
         'USER': 'sami',                      # Not used with sqlite3.
         'PASSWORD': '1994samig3',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'MyWebsite.wsgi.application'
 
 TEMPLATE_DIRS = (
 
-"/home/sami/Desktop/django1/MyWebsite/templates/"
+"/website/MyWebsite/templates/"
     
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
