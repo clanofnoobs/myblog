@@ -106,6 +106,15 @@ transition: border-left, border-right, 0.5s ease-in-out;
 padding-left:3px;
 padding-right:3px;
 }
+#logout{
+font-size:14px;
+color:lightgrey;
+font-family: sans-serif;
+
+}
+#logout:link{
+text-decoration:none;
+}
 #admin2:hover{
 border-left: 1px solid rgba(255,255,255,0.5);
 border-right: 1px solid rgba(255,255,255,0.5);
@@ -218,7 +227,7 @@ width:90%;
 margin:0px auto;
 
 }
-.nav #admin2, #about{ float: right;
+.nav #admin2, #about, #logout{ float: right;
 margin-top:17px;
  }
  

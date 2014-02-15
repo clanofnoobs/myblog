@@ -73,13 +73,25 @@
 		</a>
 		
 		
-		<a href="/articles/createe">
-		<h2 id="addpost">add post</h2></a>
+		<a href="/articles/create">
+                {% if user.is_superuser %}
+		<h2 id="addpost">add post</h2>
+                
+                {% else %}
+            
+                {% endif %} 
+                 </a>
 		<h2 id="welcome">
                         {% block heading %}   {% endblock %} 
                 </h2>
 		<h6 id="about"> about </h5>
+                {% if user.is_superuser %}
+                <a id="logout" href="/logout">Logout
+                </a>
+                {% else %}
 	   	<h6 id="admin2" >Admin</h5> 
+                {% endif %}
+
 
 	   	 
 	   

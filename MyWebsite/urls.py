@@ -7,6 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^articles/', include('article.urls')),
     url(r'^$', 'article.views.articles'),	
+    url(r'^logout$', 'MyWebsite.views.logout'),
+    url(r'^invalidlogin$', 'MyWebsite.views.invalidlogin'),
+    url(r'^loggedin$', 'article.views.loggedin'),
+    url(r'^auth$', 'article.views.auth'),
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
     # url(r'^MyWebsite/', include('MyWebsite.foo.urls')),
