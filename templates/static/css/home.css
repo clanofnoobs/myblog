@@ -13,7 +13,12 @@ margin:0px auto;
 padding-bottom:10px;
 }
 	
-
+#soundcloud{
+padding-top:70px;
+width:15%;
+margin-left:-250px;
+float:right;
+}
 #overlay{
 display: none;
 height: 100%;
@@ -370,11 +375,12 @@ margin-top:5px;
 transition: background-color 0.2s ease-in-out;
 }
 #menub hr{
+        color:orange;
 margin-top:6px;
 margin-left:20px;
 overflow:hidden;
 border:0px solid rgba(0,0,0,0.5);
-border-bottom: 1px solid rgba(255,255,255,0.7);
+border-bottom: 1px solid rgba(230,0,0);
 }
 #horizontal{
       
