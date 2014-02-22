@@ -1,4 +1,4 @@
-$(function (){
+$(function myFunction (){
  $("#admin2").click(function (){
  	
  	
