@@ -6,6 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^articles/', include('article.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^$', 'article.views.articles'),	
     url(r'^logout$', 'MyWebsite.views.logout'),
     url(r'^invalidlogin$', 'MyWebsite.views.invalidlogin'),

@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce import models as tinymce_models
 
 class Article(models.Model):
    title = models.CharField(max_length=30)
@@ -10,7 +11,6 @@ class Article(models.Model):
 def __unicode__(self):
    return self.title
    
-
 	
 
 # Create your models here.
