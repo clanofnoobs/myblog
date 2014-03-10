@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^invalidlogin$', 'MyWebsite.views.invalidlogin'),
     url(r'^loggedin$', 'article.views.loggedin'),
     url(r'^auth$', 'article.views.auth'),
+    url(r'^photos$', 'MyWebsite.views.photos'),
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
     # url(r'^MyWebsite/', include('MyWebsite.foo.urls')),
