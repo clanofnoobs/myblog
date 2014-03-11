@@ -89,7 +89,9 @@
 		<h2 id="welcome">
                         {% block heading %}   {% endblock %} 
                 </h2>
-		<h6 id="about"> about </h5>
+                <a id="about" href="/about">
+		 about
+        </a>
                 {% if user.is_superuser %}
                 <a id="logout" href="/logout">Logout
                 </a>

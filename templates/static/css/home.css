@@ -164,12 +164,29 @@ width:75%;
  transition:all 0.22s ease-in-out;
 height:35px;
 outline:none;
+background-color:white;
 padding:3px 0px 3px 3px;
 margin:5px 1px 3px 0px;
 border:1px solid #DDDDDD;
 }
+#aboutme{
+text-align:center;
+font-size:36px;
+color:teal;
+}
+#about2{
+margin:0px auto;
+margin-top:25px;
+}
+#sami{
+height:30%;
+margin-left:50px;
+margin-right:50px;
+width:30%;
+border:5px solid lightgrey;
+float:right;
 
-
+}
 #login{
  
 padding-top:30px;
@@ -188,13 +205,21 @@ top: 60px;
 
 
 }
+#aboutmyself{
+margin-left:50px;
+}
+
+#paragraph{
+padding-top:50px;
+}
+
+
 
 #title2{
 color:teal;
 
 font-size: 32px;
 background:#fff;
-
 display: inline-block;
 transition: color 0.18s ease-in-out;
 }
