@@ -25,6 +25,9 @@
 	</head>	
 
 	<body>
+        {% block sidebar %}
+       
+        {% endblock %}
 	<script> prettyPrint(); </script>
         <script>hljs.initHighlightingOnLoad();</script>
 		<div id="overlay"></div>
@@ -124,12 +127,10 @@
 <form action="/auth" method="post"> 
 {% csrf_token %}
 <br>
-<label for="username">Username: </label>
-<input name="username" id="username" type="text" placeholder = "your username"/>
+<input name="username" id="username" type="text" placeholder = "Username"/>
 <br>
 <br>
-<label for="password">Password: </label>
-<input name="password" id="password" type="password" placeholder = "your password"/>
+<input name="password" id="password" type="password" placeholder = "Password"/>
 <br>
 <br>
 <button id="createarticleb">Sign in</button>

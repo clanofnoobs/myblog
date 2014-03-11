@@ -7,6 +7,12 @@ background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 5
 background-size: 50px 50px;
 	text-align: center;
 	}
+#sidebar{
+z-index:500;
+float:right;
+border:1px dotted #ccc;
+padding:4px;
+}
 #disqus_thread{
 width:75%;
 margin:0px auto;
@@ -50,20 +56,17 @@ top:50%;
 margin-top:-200px;
 left:50%;
 margin-left:-200px;
-border-radius: 12px;
+border-radius: 4px;
 <-box-shadow: 0px 0px 7px #888888;
 width: 400px;
-height: 400px;
+height: 300px;
 
 }
 #frameborder{
-
-background: -moz-linear-gradient(bottom, #9FBBF2, #5F92FC);
-
-padding: 10px 0;
-
+margin-top:15px;
+font-size:42px;
 font-family: sans-serif;
-color: whitesmoke;
+color: grey;
 }
 #slide{
 float:left;
@@ -156,10 +159,22 @@ top:0px;
 z-index: 255;
 
 }
+#username, #password{
+width:75%;
+ transition:all 0.22s ease-in-out;
+height:35px;
+outline:none;
+padding:3px 0px 3px 3px;
+margin:5px 1px 3px 0px;
+border:1px solid #DDDDDD;
+}
+
+
 #login{
-padding-top:200px;
+ 
+padding-top:30px;
 margin: 0px auto;
-top: 250px;
+
 }
 
 
@@ -297,6 +312,7 @@ padding-left:50px;
 padding-top:50px;
 
 }
+
 #welcome{
 font-family: monospace;
 font-size:32px;
@@ -308,6 +324,13 @@ margin-left:-200px;
 
 
 }
+input[type=text]:focus, textarea:focus,input[type=password]:focus{
+ box-shadow:0 0 5px rgba(81,203,238,1);
+padding:3px 0px 3px 3px;
+margin:5px 1px 3px 0px;
+border:1px solid rgba(81,203,238,1)
+}
+
 
 .pagination{
 padding-bottom: 25px;
