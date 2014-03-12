@@ -7,8 +7,33 @@ background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 5
 background-size: 50px 50px;
 	text-align: center;
 	}
+#sidebar{
+z-index:500;
+float:right;
+border:1px dotted #ccc;
+padding:4px;
+}
+#disqus_thread{
+width:75%;
+margin:0px auto;
+padding-bottom:10px;
+}
+img, iframe{
+display:block;
+margin-left:auto;
+margin-right:auto;
+} 
+a{
+color:teal;
+text-decoration:none;
+}
 	
-
+#soundcloud{
+padding-top:70px;
+width:15%;
+margin-left:-250px;
+float:right;
+}
 #overlay{
 display: none;
 height: 100%;
@@ -31,20 +56,17 @@ top:50%;
 margin-top:-200px;
 left:50%;
 margin-left:-200px;
-border-radius: 12px;
+border-radius: 4px;
 <-box-shadow: 0px 0px 7px #888888;
 width: 400px;
-height: 400px;
+height: 300px;
 
 }
 #frameborder{
-
-background: -moz-linear-gradient(bottom, #9FBBF2, #5F92FC);
-
-padding: 10px 0;
-
+margin-top:15px;
+font-size:42px;
 font-family: sans-serif;
-color: whitesmoke;
+color: grey;
 }
 #slide{
 float:left;
@@ -101,6 +123,15 @@ transition: border-left, border-right, 0.5s ease-in-out;
 padding-left:3px;
 padding-right:3px;
 }
+#logout{
+font-size:14px;
+color:lightgrey;
+font-family: sans-serif;
+
+}
+#logout:link{
+text-decoration:none;
+}
 #admin2:hover{
 border-left: 1px solid rgba(255,255,255,0.5);
 border-right: 1px solid rgba(255,255,255,0.5);
@@ -128,10 +159,39 @@ top:0px;
 z-index: 255;
 
 }
+#username, #password{
+width:75%;
+ transition:all 0.22s ease-in-out;
+height:35px;
+outline:none;
+background-color:white;
+padding:3px 0px 3px 3px;
+margin:5px 1px 3px 0px;
+border:1px solid #DDDDDD;
+}
+#aboutme{
+text-align:center;
+font-size:36px;
+color:teal;
+}
+#about2{
+margin:0px auto;
+margin-top:25px;
+}
+#sami{
+height:30%;
+margin-left:50px;
+margin-right:50px;
+width:30%;
+border:5px solid lightgrey;
+float:right;
+
+}
 #login{
-padding-top:200px;
+ 
+padding-top:30px;
 margin: 0px auto;
-top: 250px;
+
 }
 
 
@@ -145,13 +205,21 @@ top: 60px;
 
 
 }
+#aboutmyself{
+margin-left:50px;
+}
+
+#paragraph{
+padding-top:50px;
+}
+
+
 
 #title2{
 color:teal;
 
 font-size: 32px;
 background:#fff;
-
 display: inline-block;
 transition: color 0.18s ease-in-out;
 }
@@ -213,7 +281,7 @@ width:90%;
 margin:0px auto;
 
 }
-.nav #admin2, #about{ float: right;
+.nav #admin2, #about, #logout{ float: right;
 margin-top:17px;
  }
  
@@ -269,6 +337,7 @@ padding-left:50px;
 padding-top:50px;
 
 }
+
 #welcome{
 font-family: monospace;
 font-size:32px;
@@ -280,6 +349,13 @@ margin-left:-200px;
 
 
 }
+input[type=text]:focus, textarea:focus,input[type=password]:focus{
+ box-shadow:0 0 5px rgba(81,203,238,1);
+padding:3px 0px 3px 3px;
+margin:5px 1px 3px 0px;
+border:1px solid rgba(81,203,238,1)
+}
+
 
 .pagination{
 padding-bottom: 25px;
@@ -321,16 +397,6 @@ transition: color 0.2s ease-in-out;
 color:black;
 }
 
-.footer{
-width:100%;
-background:#272727;
-z-index:50;
-}	
-.container:after{
-
-display:block;
-
-}
 
 .footer, .container:after{
 height:100px;
@@ -366,11 +432,12 @@ margin-top:5px;
 transition: background-color 0.2s ease-in-out;
 }
 #menub hr{
+
 margin-top:6px;
 margin-left:20px;
 overflow:hidden;
-border:0px solid rgba(0,0,0,0.5);
-border-bottom: 1px solid rgba(255,255,255,0.7);
+border:thin solid rgba(255,150,20,0.75);
+
 }
 #horizontal{
       
@@ -392,12 +459,6 @@ cursor:auto;
 }
 
 
-iframe{
-
-left:45%;
-text-align:center;
-margin-left:150px;
-}
 .comments{
 
 color: rgba(0,0,0,0.45);
