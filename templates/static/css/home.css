@@ -18,6 +18,24 @@ padding-left:10px;
 color:teal;
 font-size:28px;
 }
+#frame img{
+width:660px;
+padding:10px;
+}
+
+#frame{
+position:fixed;
+z-index:400;
+background-color:white;
+//width:700px;
+//height:inherit;
+margin:0px auto;
+display:none;
+left:50%;
+top:50%;
+margin-left:-330px;
+margin-top:-300px;
+}
 #portfolio{
 list-style-type:none;
 }
