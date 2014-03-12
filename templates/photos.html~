@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="abum">
+<a id="title2">
+        Cinema 4D Renders
+        <hr>
+</a>
+<div id ="wrapper">
+        <ul id = "portfolio">
+                <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+        </ul>
+</div>
+</div>
+
+{% endblock %}
