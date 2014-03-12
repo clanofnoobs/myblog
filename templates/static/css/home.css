@@ -22,7 +22,9 @@ font-size:28px;
 width:660px;
 padding:10px;
 }
-
+#lol{
+color:orange;
+}
 #frame{
 position:fixed;
 z-index:400;
@@ -67,6 +69,7 @@ a{
 color:teal;
 text-decoration:none;
 }
+
 	
 #soundcloud{
 padding-top:70px;
@@ -248,6 +251,12 @@ top: 60px;
 #aboutmyself{
 margin-left:50px;
 }
+#projectpicture{
+float:right;
+width:30%;
+height:30%;
+padding-left:75px;
+}
 
 #paragraph{
 padding-top:50px;
@@ -283,8 +292,46 @@ color: orange;
 
 }
 #lol{
-color:blue;
+color:rgba(233,130,0,0.8);
+list-style-type:bullet;
+padding:20px;
 }
+#experiments1{
+display:block;
+padding-left:20px;
+}
+#experiments img{
+width:300px;
+height:125px;
+margin-left:0px;
+margin-right:0px;
+}
+#experiments li a{
+color:orange;
+display:block;
+}
+#projects{
+width:500px;
+margin:0px auto;
+}
+#projects p{
+text-align:left;
+font-size:15px;
+padding-top:10px;
+}
+#projects h1{
+color:teal;
+padding-top:15px;
+font-size:32px;
+text-align:center;
+}
+
+#experiments1 ul li{
+text-align:center;
+display:inline;
+float:left;
+
+       }
 
 #createarticleb{
 padding: 10px 15px;
@@ -346,8 +393,8 @@ hr{
 width: 60%;
 border: 0;
 height:0;
-border-top: 1px solid rgba(0,0,0,0.13);
-border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+border-top: 1px solid rgba(0,0,0,0.25);
+border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 #pub_date{

@@ -14,6 +14,8 @@ urlpatterns = patterns('',
     url(r'^auth$', 'article.views.auth'),
     url(r'^photos$', 'MyWebsite.views.photos'),
     url(r'^about$', 'article.views.about'),
+    url(r'^experiments', 'article.views.experiments'),
+    url(r'^projects', 'article.views.projects'),
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
     # url(r'^MyWebsite/', include('MyWebsite.foo.urls')),

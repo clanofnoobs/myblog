@@ -9,6 +9,12 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.context_processors import csrf
 
+def projects(request):
+   return render_to_response('projects.html', context_instance=RequestContext(request))
+
+def experiments(request):
+   return render_to_response('experiments.html', context_instance=RequestContext(request))
+
 def about(request):
    return render_to_response('about.html', context_instance=RequestContext(request))
 
