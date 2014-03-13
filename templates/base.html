@@ -77,14 +77,17 @@
 		</a>
 
 
-		<a href="/articles/create">
+	
                 {% if user.is_superuser %}
+                <a href="/articles/create">
 		<h2 id="addpost">add post</h2>
-                
+                 </a> 
                 {% else %}
-            
+                <h2 id="addpost"> {% block currentpage %} 
+                {% endblock %} 
+        </h2>
                 {% endif %} 
-                 </a>
+                
 		<h2 id="welcome">
                         {% block heading %}   {% endblock %} 
                 </h2>
@@ -92,7 +95,7 @@
 		 about
         </a>
                 {% if user.is_superuser %}
-                <a id="logout" href="/logout">Logout
+                <a id="logout" href="/logout">logout
                 </a>
                 {% else %}
 	   	<h6 id="admin2" >Admin</h5> 
