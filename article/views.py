@@ -29,10 +29,10 @@ def auth(request):
    
    if user is not None:
       login(request, user)
-      return HttpResponseRedirect('/loggedin',)
+      return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
    else:
      
-      return HttpResponseRedirect('/invalidlogin',)
+      return HttpResponseRedirect('/invalidlogin')
 
 def articles(request):
    articles = Article.objects.all().order_by("-pub_date")
