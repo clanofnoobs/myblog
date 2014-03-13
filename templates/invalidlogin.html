@@ -1,5 +1,27 @@
-{% extends "base.html" %}
-{% block content %}
-<h1> Please try to log in again, invalid log in  </h1>
 
-{% endblock %}
+<html>
+<head> 
+<link rel="stylesheet" href="/static/css/login.css" type="text/css"/>
+<title> Please login in again </title> 
+</head>
+<body>
+<div id="loginModal">
+<h1> Please try to log in again, invalid log in  </h1>
+<div id="login">
+<form action="/auth" method="post"> 
+{% csrf_token %}
+<br>
+<input name="username" id="username" type="text" placeholder = "Username"/>
+<br>
+<br>
+<input name="password" id="password" type="password" placeholder = "Password"/>
+<br>
+<br>
+<button id="createarticleb">Sign in</button>
+</form>
+</div>	
+
+</div>
+</body>
+
+

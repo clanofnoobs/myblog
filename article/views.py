@@ -18,6 +18,7 @@ def experiments(request):
 def about(request):
    return render_to_response('about.html', context_instance=RequestContext(request))
 
+@login_required(login_url='/invalidlogin')
 def loggedin(request):
    return render_to_response('loggedin.html', context_instance=RequestContext(request))
 
@@ -25,12 +26,13 @@ def auth(request):
    username = request.POST.get('username', '')
    password = request.POST.get('password', '')
    user = authenticate(username=username, password=password)
-
+   
    if user is not None:
       login(request, user)
-      return HttpResponseRedirect('/loggedin')
+      return HttpResponseRedirect('/loggedin',)
    else:
-      return HttpResponseRedirect('/invalidlogin')
+     
+      return HttpResponseRedirect('/invalidlogin',)
 
 def articles(request):
    articles = Article.objects.all().order_by("-pub_date")
@@ -72,4 +74,3 @@ def create(request):
     
     return render_to_response('create_article.html', args, context_instance=RequestContext(request))
   
-
