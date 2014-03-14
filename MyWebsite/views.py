@@ -13,7 +13,7 @@ def invalidlogin(request):
 
 def logout(request):
    auth.logout(request)
-   return redirect('article.views.articles')
+   return redirect(request.META.get('HTTP_REFERER','/'))
 
 def photos(request):
    return render_to_response('photos.html', context_instance=RequestContext(request))
