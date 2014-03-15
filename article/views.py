@@ -46,6 +46,7 @@ def articles(request):
        articles = paginator.page(page)
    except (InvalidPage, EmptyPage):
        articles = paginator.page(paginator.num_pages)
+       
    
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
 

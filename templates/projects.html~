@@ -31,8 +31,7 @@ my projects
         <h1> Drawing  canvas </h1>
         <p>
         <img src="/static/images/media/noimage.png" alt="" id="projectpicture" />
-	 A real-time drawing canvas implemented using gevent-socketio for Django. 
-         Generate a URL to share your piece of art with anyone. 
+	A real-time online 
 	 </p>
         </br>
         </br>

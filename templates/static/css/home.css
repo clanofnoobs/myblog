@@ -12,6 +12,8 @@ min-height:500px;
 width:100%;
 margin-left:100px;
 }
+
+
 #copyright{
 text-align:center;
 display:block;
@@ -54,7 +56,7 @@ margin:10px 5px 10px 5px;
 }
 #portfolio li img{
 width:240px;
-height:170px;
+height:140px;
 }
 #sidebar{
 z-index:500;
@@ -305,9 +307,11 @@ color:rgba(233,130,0,0.8);
 list-style-type:bullet;
 padding:20px;
 }
-#experiments1{
-display:block;
-padding-left:20px;
+
+#experiments li{
+padding-right:10px;
+padding-left:10px;
+padding-bottom:10px;
 }
 #experiments img{
 width:300px;

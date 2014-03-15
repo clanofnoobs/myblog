@@ -1,19 +1,28 @@
 {% extends "base.html" %}
+{% block currentpage %}
+my gallery
+{% endblock %}
+{% block title %}
+Photos
+{% endblock %}
 {% block content %}
-<div id="abum">
-<a id="title2">
+<div>
+
+<h1 id="album">
         Cinema 4D Renders
-        <hr>
-</a>
+</h1>
+</div>
 <div id ="wrapper">
         <ul id = "portfolio">
                 <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
- <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
- <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
- <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
- <li><img src="/static/images/media/1.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/2.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/3.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/4.jpg" alt="img"/>  </li>
+ <li><img src="/static/images/media/5.jpg" alt="img"/>  </li>
         </ul>
 </div>
 </div>
+
+
 
 {% endblock %}
