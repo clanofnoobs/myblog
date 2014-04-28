@@ -12,6 +12,17 @@ min-height:500px;
 width:100%;
 margin-left:100px;
 }
+#contact img{
+display:inline;
+margin:0px auto;
+}
+#contact{
+margin:0px auto;
+height:50px;
+width:100px;
+margin-top:150px;
+text-align:center;
+}
 
 
 #copyright{
