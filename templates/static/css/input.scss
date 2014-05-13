@@ -14,7 +14,17 @@ margin-left:100px;
 #contact img{
 display:inline;
 margin:0px auto;
+transition:all 0.3s linear;
 }
+#contact img:hover{
+transform:translateY(-6px);
+}
+#description p{
+display:inline;
+color:whitesmoke;
+font-size:16px;
+}
+#portfolio p{display:none;}
 #contact{
 margin:0px auto;
 height:50px;
@@ -58,14 +68,35 @@ top:50%;
 margin-left:-330px;
 margin-top:-300px;
 }
-#arrowleft{
-width:120px;
-float:left;
-position:fixed;
-height:100%;
-display:none;
-background-color:white;
+
+
+#arrowleft {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  margin-top:-20px;
+  left:0px;
+  display: none;
+  background-color: black; }
+
+#arrowright {
+  width: 40px;
+  right:0px;
+  position: absolute;
+  margin-top:-20px;
+  height: 40px;
+  display: none;
+  background-color: black; }
+#description{
+    display:none;
+    width:100%;
+    background-color:black;
+    opacity:0.6;
+    position:absolute;
+    bottom:0px;
+    height:40px;
 }
+
 #portfolio{
 list-style-type:none;
 }
@@ -76,7 +107,13 @@ margin:10px 5px 10px 5px;
 #portfolio li img{
 width:240px;
 height:150px;
+transition: all 0.3s;
 }
+#portfolio li img:hover{
+transform:translateY(-2px);
+opacity:0.5;
+}
+
 #sidebar{
 z-index:500;
 float:right;
@@ -131,7 +168,6 @@ margin-top:-200px;
 left:50%;
 margin-left:-200px;
 border-radius: 4px;
-<-box-shadow: 0px 0px 7px #888888;
 width: 400px;
 height: 300px;
 

@@ -7,13 +7,13 @@
 {% block content %}
 
 <div class="articles">
-<div id="thetitle">   <h1 id="title3"> {{ article.title }} </h1>
+<div id="thetitle">   <h1 id="title3"> {{ post.title }} </h1>
 <div id="pub_date"> 
-on {{ article.pub_date }}      
+on {{ post.pub_date }}      
   </div>
   </div>
 
-<p> {{ article.body|safe|linebreaksbr }} </p>
+<p> {{ post.body|safe|linebreaksbr }} </p>
 <br>
 <hr>
 </div>

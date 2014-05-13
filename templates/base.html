@@ -11,7 +11,7 @@
 	<link href="/static/css/reset.css" type="text/css"
 	rel="stylesheet"/>
 	<link rel="stylesheet" href="/static/css/desert.css"/>
-	<link href="/static/css/home.css" type="text/css"
+	<link href="/static/css/sass.css" type="text/css"
 	rel="stylesheet"/>
 
         <script type="text/javascript" src="/static/js/tiny_mce/tiny_mce.js"></script>
@@ -25,9 +25,13 @@
 	</head>	
 
 	<body>
-        <div id="frame">
-<img src="" alt="" />
-</div>
+    <div id="frame">
+        <a href=""> <div id="arrowleft"></div><a>
+         <a href=""> <div id="arrowright"></div></a>
+         <div id="description"><p> </p></div>
+  <img src="" alt="" />
+       
+    </div>
         {% block sidebar %}
        
         {% endblock %}
@@ -45,28 +49,35 @@
                 <hr>
                 </div>
 		<div id="menu">
-
-		<div>
+                
 		<a href="/photos">
+                    <div>
 		Photos
+            </div>
 		</a>
-		</div>
-		<div>
-		<a href="/projects">
-		Projects
-		</a>
-		</div>
-		<div>
-		<a href="/experiments">
-		Experiments
-		</a>
-		</div>
+        
 
-		<div>
-		<a href="/articles/home/">
-		Contact me
+		
+		<a href="/projects">
+                    <div>
+		Projects
+            </div>
 		</a>
-		</div>
+	    
+		
+		<a href="/experiments">
+                    <div>
+		Experiments
+            </div>
+		</a>
+
+		
+		<a href="/articles/home/">
+                    <div>
+		Contact me
+            </div>
+		</a>
+	    
 		</div>
 		</div>
 
@@ -100,9 +111,6 @@
                 {% else %}
 	   	<h6 id="admin2" >Admin</h5> 
                 {% endif %}
-
-
-
 
 
 		      </div>      

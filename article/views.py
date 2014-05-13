@@ -35,17 +35,17 @@ def auth(request):
       return HttpResponseRedirect('/invalidlogin')
 
 def articles(request):
-   articles = Article.objects.all().order_by("-pub_date")
-   paginator = Paginator(articles, 3)
-   d = dict(articles=articles, user= request.user)
+   posts = Article.objects.all().order_by("-pub_date")
+   paginator = Paginator(posts, 3)
+   d = dict(posts=posts, user= request.user)
    d.update(csrf(request))
    try: page = int(request.GET.get("page", '1'))
    except ValueError: page = 1
 
    try:
-       articles = paginator.page(page)
+       posts = paginator.page(page)
    except (InvalidPage, EmptyPage):
-       articles = paginator.page(paginator.num_pages)
+       posts = paginator.page(paginator.num_pages)
        
    
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
@@ -54,8 +54,8 @@ def webgl(request):
    return render_to_response("webgl.html", context_instance=RequestContext(request))
    
 
-def article(request, article_id=1):
-   return render_to_response('article.html', {'article':Article.objects.get(id=article_id) }, context_instance=RequestContext(request))
+def post(request, post_id=1):
+   return render_to_response('article.html', {'post':Article.objects.get(id=post_id) }, context_instance=RequestContext(request))
    
 @login_required(login_url='/invalidlogin')
 def create(request):
