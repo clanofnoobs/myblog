@@ -64,22 +64,34 @@ body {
   margin-top: -300px; }
 
 #arrowleft {
-  width: 40px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid black;
+  margin-left: -10px;
   position: absolute;
-  height: 40px;
   margin-top: -20px;
   left: 0px;
-  display: none;
-  background-color: black; }
+  display: none; }
+
+#arrowleft:hover {
+  cursor: pointer; }
+
+#arrowright:hover {
+  cursor: pointer; }
 
 #arrowright {
-  width: 40px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid black;
   right: 0px;
   position: absolute;
-  margin-top: -20px;
-  height: 40px;
-  display: none;
-  background-color: black; }
+  margin-top: -10px;
+  margin-right: -10px;
+  display: none; }
 
 #description {
   display: none;

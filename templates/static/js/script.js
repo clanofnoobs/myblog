@@ -27,6 +27,9 @@ $("#overlay").click(function(){
         $("#frame").fadeOut();
         $("#overplay").fadeOut();
 });
+$("#arrowright").click(function(){
+    closest("#portfolio").next().find('img').trigger('click');
+});
         
 });
 
