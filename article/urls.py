@@ -6,5 +6,8 @@ urlpatterns = patterns('',
 	url(r'^create/$', 'article.views.create'),
         url(r'^webgl/$', 'article.views.webgl'),
         url(r'^cuberotation/$', 'article.views.cuberotation'),
+        url(r'^lighting/$', 'article.views.lighting'),
+
+
 
 )

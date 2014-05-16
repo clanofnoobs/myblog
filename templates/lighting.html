@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}
+Lambert Material w/ Directional lighting 
+{% endblock %}
+{% block container %}
+
+   <script src="http://www.html5canvastutorials.com/libraries/three.min.js">    </script> 
+   <script>
+      var x = 30;
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+ 
+      // camera
+      var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+      //camera.position.y = -400;
+      camera.position.z = 500;
+      // scene
+      var scene = new THREE.Scene();
+                
+      // cube
+      var cube = new THREE.Mesh(new THREE.CubeGeometry(200, 200, 200), new THREE.MeshLambertMaterial({color: 'blue'}));
+      //changing to lambert material
+    
+      cube.rotation.x = Math.PI * 0.1; 
+      //camera.lookAt(cube.position);
+      cube.overdraw = true;
+
+      scene.add(cube);
+      var render = function(){
+        requestAnimationFrame(render);
+        cube.rotation.y += 2 * Math.PI / 400;
+        //cube.rotation.y += 2 * Math.sin(x) / 200;
+        //cube.rotation.z += 2 * Math.PI / 500;
+        x+=1;
+        renderer.render(scene,camera);
+      };
+      var light = new THREE.DirectionalLight(0xffffff);
+      light.position.set(1,1,1).normalize();
+      scene.add( light );
+
+      render();
+      // start animation
+      
+    </script>
+    {% endblock %}

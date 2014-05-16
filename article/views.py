@@ -56,6 +56,9 @@ def webgl(request):
 def cuberotation(request):
    return render_to_response("cuberotation.html", context_instance=RequestContext(request))
 
+def lighting(request):
+   return render_to_response("lighting.html", context_instance=RequestContext(request))
+
    
 
 def post(request, post_id=1):

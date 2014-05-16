@@ -4,8 +4,8 @@ WebGL 3D Cube
 {% endblock %}
 {% block container %}
 
-<script src="http://www.html5canvastutorials.com/libraries/three.min.js">    </script>    
-<script>
+    <script src="/static/js/three.min.js"></script>
+    <script>
       var x = 30;
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -20,9 +20,9 @@ WebGL 3D Cube
       var scene = new THREE.Scene();
                 
       // cube
-      var cube = new THREE.Mesh(new THREE.CubeGeometry(200, 200, 200), new THREE.MeshNormalMaterial());
-      
-
+      var cube = new THREE.Mesh(new THREE.CubeGeometry(200, 200, 200), new THREE.MeshBasicMaterial({color: 'blue',}));
+      //changing to lambert material
+    
       cube.rotation.z = 0.75; 
       camera.lookAt(cube.position);
       scene.add(cube);
@@ -34,6 +34,9 @@ WebGL 3D Cube
         x+=1;
         renderer.render(scene,camera);
       };
+  var directionalLight = new THREE.DirectionalLight( 0xffffff );
+      directionalLight.position.set( 1, 1, 1);
+      scene.add( light );
 
       render();
       // start animation
