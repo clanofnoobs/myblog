@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-Lambert Material w/ Directional lighting 
+Sphere 
 {% endblock %}
 {% block container %}
 
@@ -18,24 +18,24 @@ Lambert Material w/ Directional lighting
       // scene
       var scene = new THREE.Scene();
                 
-      // cube
-      var cube = new THREE.Mesh(new THREE.SphereGeometry(120, 20, 20), new THREE.MeshLambertMaterial({color: 'lightblue'}));
+      // sphere
+      var sphere = new THREE.Mesh(new THREE.SphereGeometry(120, 20, 20), new THREE.MeshLambertMaterial({color: 'lightblue'}));
       //changing to lambert material
     
-      cube.rotation.x = Math.PI * 0.1; 
-      //camera.lookAt(cube.position);
-      cube.overdraw = true;
+      sphere.rotation.x = Math.PI * 0.1; 
+      //camera.lookAt(sphere.position);
+      sphere.overdraw = true;
 
-      scene.add(cube);
+      scene.add(sphere);
       var render = function(){
         requestAnimationFrame(render);
-        cube.rotation.y += 2 * Math.PI / 400;
-        //cube.rotation.y += 2 * Math.sin(x) / 200;
-        //cube.rotation.z += 2 * Math.PI / 500;
+        sphere.rotation.y += 2 * Math.PI / 150;
+        //sphere.rotation.y += 2 * Math.sin(x) / 200;
+        //sphere.rotation.z += 2 * Math.PI / 500;
         x+=1;
         renderer.render(scene,camera);
       };
-      var light = new THREE.DirectionalLight('white', 2);
+      var light = new THREE.DirectionalLight('white', 1.5);
       light.position.set(2,2,2).normalize();
       scene.add( light );
 
