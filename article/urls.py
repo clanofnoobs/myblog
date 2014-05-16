@@ -5,5 +5,6 @@ urlpatterns = patterns('',
     url(r'^get/(?P<post_id>\d+)/$', 'article.views.post'),
 	url(r'^create/$', 'article.views.create'),
         url(r'^webgl/$', 'article.views.webgl'),
+        url(r'^cuberotation/$', 'article.views.cuberotation'),
 
 )
