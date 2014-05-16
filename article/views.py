@@ -58,6 +58,9 @@ def cuberotation(request):
 
 def lighting(request):
    return render_to_response("lighting.html", context_instance=RequestContext(request))
+def sphere(request):
+   return render_to_response("sphere.html", context_instance=RequestContext(request))
+
 
    
 
