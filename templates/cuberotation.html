@@ -27,12 +27,13 @@ WebGL 3D Cube
       camera.lookAt(cube.position);
       scene.add(cube);
       var render = function(){
-        requestAnimationFrame(render);
-        cube.rotation.x += 2 * Math.sin(x) * 2 / 400;
+               cube.rotation.x += 2 * Math.sin(x) * 2 / 400;
         cube.rotation.y += 2 * Math.sin(x) / 200;
         cube.rotation.z += 2 * Math.PI / 500;
         x+=1;
         renderer.render(scene,camera);
+        requestAnimationFrame(render);
+
       };
 
       render();

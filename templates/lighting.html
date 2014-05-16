@@ -4,7 +4,7 @@ Lambert Material w/ Directional lighting
 {% endblock %}
 {% block container %}
 
-   <script src="http://www.html5canvastutorials.com/libraries/three.min.js">    </script> 
+   <script src="/static/js/three.min.js">    </script> 
    <script>
       var x = 30;
       var renderer = new THREE.WebGLRenderer();
@@ -19,7 +19,7 @@ Lambert Material w/ Directional lighting
       var scene = new THREE.Scene();
                 
       // cube
-      var cube = new THREE.Mesh(new THREE.CubeGeometry(200, 200, 200), new THREE.MeshLambertMaterial({color: 'blue'}));
+      var cube = new THREE.Mesh(new THREE.CubeGeometry(200, 200, 200), new THREE.MeshLambertMaterial({color: 'lightblue'}));
       //changing to lambert material
     
       cube.rotation.x = Math.PI * 0.1; 
@@ -35,8 +35,8 @@ Lambert Material w/ Directional lighting
         x+=1;
         renderer.render(scene,camera);
       };
-      var light = new THREE.DirectionalLight(0xffffff);
-      light.position.set(1,1,1).normalize();
+      var light = new THREE.DirectionalLight('white', 2);
+      light.position.set(2,2,2).normalize();
       scene.add( light );
 
       render();
