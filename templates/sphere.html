@@ -17,10 +17,16 @@ Sphere
       camera.position.z = 500;
       // scene
       var scene = new THREE.Scene();
+      var material = new THREE.MeshPhongMaterial({
+                  color: 'lightblue',
+                  specular: 'red',
+                  shininess:'30',
                 
+                  });
+      var geometry = new THREE.SphereGeometry(120,64,64);
       // sphere
-      var sphere = new THREE.Mesh(new THREE.SphereGeometry(120, 20, 17), new THREE.MeshLambertMaterial({color: 'lightblue'}));
-      //changing to lambert material
+      var sphere = new THREE.Mesh(geometry,material);       //changing to lambert material
+      material.map = THREE.ImageUtils.loadTexture('/static/images/media/earth_diffuse.jpg')
     
       sphere.rotation.x = Math.PI * 0.1; 
       //camera.lookAt(sphere.position);
@@ -30,7 +36,7 @@ Sphere
       var render = function(){
         requestAnimationFrame(render);
         sphere.rotation.y += 2 * Math.PI / 150;
-        //sphere.rotation.y += 2 * Math.sin(x) / 200;
+        sphere.rotation.x += 2 * Math.PI / 200;
         //sphere.rotation.z += 2 * Math.PI / 500;
         x+=1;
         renderer.render(scene,camera);
