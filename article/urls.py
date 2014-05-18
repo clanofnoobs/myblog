@@ -8,6 +8,7 @@ urlpatterns = patterns('',
         url(r'^cuberotation/$', 'article.views.cuberotation'),
         url(r'^lighting/$', 'article.views.lighting'),
         url(r'^sphere/$', 'article.views.sphere'),
+        url(r'^trackball/$','article.views.trackball'),
 
 
 
