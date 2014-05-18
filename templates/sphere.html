@@ -12,20 +12,20 @@ Sphere
       document.body.appendChild(renderer.domElement);
  
       // camera
-      var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+      var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 1000);
       //camera.position.y = -400;
-      camera.position.z = 500;
+      camera.position.z = 2;
       // scene
       var scene = new THREE.Scene();
    
       var material = new THREE.MeshPhongMaterial()
 
-      var geometry = new THREE.SphereGeometry(120,64,64)
+      var geometry = new THREE.SphereGeometry(0.5,32,32)
       // sphere
       var sphere = new THREE.Mesh(geometry,material)       //changing to lambert material
       material.map = THREE.ImageUtils.loadTexture('/static/images/media/earth_diffuse.jpg')
       material.bumpMap = THREE.ImageUtils.loadTexture('/static/images/media/earth_bump.jpg')
-      material.bumpScale = 8.5
+      material.bumpScale = 0.08
       material.specularMap = THREE.ImageUtils.loadTexture('/static/images/media/earth_specular.jpg')
       material.specular = new THREE.Color('grey')
 
@@ -38,13 +38,21 @@ Sphere
    var mat = new THREE.MeshPhongMaterial({
                 map : THREE.ImageUtils.loadTexture('/static/images/media/cloud1.jpg'),
                 side: THREE.DoubleSide,
-                opacity: 0.39,
+                opacity: 0.67,
                 transparent : true,
                 depthWrite : false,
                   })
-      var geo = new THREE.SphereGeometry(121,64,64);
+      var geo = new THREE.SphereGeometry(0.51,32,32);
       var cloudMesh = new THREE.Mesh(geo,mat)
       sphere.add(cloudMesh)
+    //Starfield
+
+    var geom = new THREE.SphereGeometry(1000,32,32)
+    var mate = new THREE.MeshBasicMaterial()
+    mate.map = THREE.ImageUtils.loadTexture('/static/images/media/starfield.jpg')
+    mate.side = THREE.BackSide
+    var starfield = new THREE.Mesh(geom,mate)
+    scene.add(starfield)
 
       var render = function(){
         requestAnimationFrame(render);
