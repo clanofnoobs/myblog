@@ -19,6 +19,7 @@ class JSONResponse(HttpResponse):
       kwargs['content_type'] = 'application/json'
       super(JSONResponse,self).__init__(content, **kwargs)
 
+
 @csrf_exempt
 def post_list(request):
    if request.method == 'GET':
@@ -32,6 +33,22 @@ def post_list(request):
          serializer.save()
          return JSONResponse(serializer.data, status=201)
       return JSONResponse(serializer.errors,status=400)
+
+@csrf_exempt
+def post_detail(request,pk):
+   try:
+      snippet = Snippet.objects.get(pk=pk)
+   except:
+      return HttpResponse(status=404)
+   if request.method == 'GET':
+      serializer = ArticleSerializer(snippet)
+      return JSONRenderer(serializer.data)
+   elif request.method == 'PUT':
+      data = JSONParser().parse(snippet, data=data)
+      if serializer.is_valid():
+         serializer.save()
+         return JSONResponse(serializer.data)
+      return JSONResponse(serializer.errors, status=400)
 
 def projects(request):
    return render_to_response('projects.html', context_instance=RequestContext(request))
