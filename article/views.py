@@ -49,6 +49,9 @@ def post_detail(request,pk):
          serializer.save()
          return JSONResponse(serializer.data)
       return JSONResponse(serializer.errors, status=400)
+   elif request.method == 'DELETE':
+      snippet.delete()
+      return HttpResponse(status=204)
 
 def projects(request):
    return render_to_response('projects.html', context_instance=RequestContext(request))
