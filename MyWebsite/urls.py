@@ -16,6 +16,12 @@ urlpatterns = patterns('',
     url(r'^about$', 'article.views.about'),
     url(r'^experiments', 'article.views.experiments'),
     url(r'^projects', 'article.views.projects'),
+    url(r'^webgl/$', 'article.views.webgl'),
+    url(r'^cuberotation/$', 'article.views.cuberotation'),
+    url(r'^lighting/$', 'article.views.lighting'),
+    url(r'^sphere/$', 'article.views.sphere'),
+    url(r'^trackball/$','article.views.trackball'),
+
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
     # url(r'^MyWebsite/', include('MyWebsite.foo.urls')),
