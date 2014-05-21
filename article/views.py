@@ -49,23 +49,7 @@ def articles(request):
        
    
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
-
-
-#def webgl(request):
-  # return render_to_response("webgl.html", context_instance=RequestContext(request))
-
-def cuberotation(request):
-   return render_to_response("cuberotation.html", context_instance=RequestContext(request))
-
-def lighting(request):
-   return render_to_response("lighting.html", context_instance=RequestContext(request))
-def sphere(request):
-   return render_to_response("sphere.html", context_instance=RequestContext(request))
-
-def trackball(request):
-   return render_to_response("trackball.html", context_instance=RequestContext(request))
-
-   
+  
 
 def post(request, post_id=1):
    return render_to_response('article.html', {'post':Article.objects.get(id=post_id) }, context_instance=RequestContext(request))

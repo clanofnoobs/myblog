@@ -20,5 +20,7 @@ class experiments(models.Model):
    title = models.CharField(max_length=20)
    thumbnail = models.ImageField(upload_to="/",default = '/no-image.jpg')
 
+   def __unicode__(self):
+      return self.title
 
 
