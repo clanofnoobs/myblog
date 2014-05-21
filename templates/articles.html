@@ -6,13 +6,13 @@ home
 {% for post in posts %}
 <div class="articles">
 <div id="thetitle">
-<h1 id="tile1" > <a id="title2" href="/articles/get/{{ post.id }}/"> {{ post.title }} </a> </h1>
+<h1 id="tile1" > <a id="title2" href="/posts/get/{{ post.id }}/"> {{ post.title }} </a> </h1>
 <div id= "pub_date"> <em>on</em> {{ post.pub_date }} </div>
 </div>
 
 <p class="body1"> {{ post.body|safe|linebreaksbr }} </p>
 <br>
-<span class="comments"> <a href="/articles/get/{{ post.id }}/#disqus_thread"> 
+<span class="comments"> <a href="/posts/get/{{ post.id }}/#disqus_thread"> 
         comments</a> </span>
 
 <br>
@@ -21,19 +21,19 @@ home
 </div>
 {% endfor %}
 
-{% if articles.object_list and articles.paginator.num_pages > 1 %}
+{% if posts.object_list and posts.paginator.num_pages > 1 %}
 <div class="pagination">
 	<span class="step-links">
-		{% if articles.has_previous %}
-			<a id="prev" href="?page={{ articles.previous_page_number }}" > newer entries &lt;&lt; </a>
+		{% if posts.has_previous %}
+			<a id="prev" href="?page={{ posts.previous_page_number }}" > newer entries &lt;&lt; </a>
 		{% endif %}
 		
 		<span class="current">
-			&nbsp;Page {{ articles.number }} of {{ articles.paginator.num_pages }}		
+			&nbsp;Page {{ posts.number }} of {{ posts.paginator.num_pages }}		
 		</span>
 		
-		{% if articles.has_next %}
-			<a id="next" href="?page={{ articles.next_page_number }}" > &gt;&gt; older entries </a>
+		{% if posts.has_next %}
+			<a id="next" href="?page={{ posts.next_page_number }}" > &gt;&gt; older entries </a>
 		{% endif %}
 	
 	</span>
