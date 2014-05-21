@@ -23,6 +23,6 @@ class ExperimentsView(View):
   link = ""
   
   def get(self,request):
-     return render_to_response(link, context_instance=RequestContext(request))
+     return render_to_response(self.link, context_instance=RequestContext(request))
 
 

@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
-from MyWebsite import ExperimentsView
+from MyWebsite.views import ExperimentsView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
