@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.files import ImageField
 from tinymce import models as tinymce_models
 
 
@@ -11,4 +12,7 @@ class Article(models.Model):
    def __unicode__(self):
        return self.title
    
+class album(models.Model):
+   image = models.ImageField(upload_to = '/', default = '/no-img.jpg')
+   description = models.CharField(max_length=40)
 
