@@ -50,8 +50,9 @@ def articles(request):
    
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
 
-def webgl(request):
-   return render_to_response("webgl.html", context_instance=RequestContext(request))
+
+#def webgl(request):
+  # return render_to_response("webgl.html", context_instance=RequestContext(request))
 
 def cuberotation(request):
    return render_to_response("cuberotation.html", context_instance=RequestContext(request))

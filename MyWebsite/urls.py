@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
+from MyWebsite import ExperimentsView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -16,11 +18,13 @@ urlpatterns = patterns('',
     url(r'^about$', 'article.views.about'),
     url(r'^experiments', 'article.views.experiments'),
     url(r'^projects', 'article.views.projects'),
-    url(r'^webgl/$', 'article.views.webgl'),
+    #url(r'^webgl/$', 'article.views.webgl'),
     url(r'^cuberotation/$', 'article.views.cuberotation'),
     url(r'^lighting/$', 'article.views.lighting'),
     url(r'^sphere/$', 'article.views.sphere'),
     url(r'^trackball/$','article.views.trackball'),
+    #url(r'^webgl/$', TemplateView.as_view(template_name="webgl.html")),
+    url(r'^webgl/$', ExperimentsView.as_view(link="webgl.html")),
 
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
