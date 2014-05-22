@@ -51,8 +51,10 @@ def articles(request):
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
   
 
-def post(request, post_id=1):
-   return render_to_response('article.html', {'post':Article.objects.get(id=post_id) }, context_instance=RequestContext(request))
+def post(request, postslug):
+   post = Article.objects.get(slugifiedtitle=postslug)
+   context = {'post':post}
+   return render_to_response('article.html', context, context_instance=RequestContext(request))
    
 @login_required(login_url='/invalidlogin')
 def create(request):

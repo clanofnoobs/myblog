@@ -6,7 +6,7 @@ home
 {% for post in posts %}
 <div class="articles">
 <div id="thetitle">
-<h1 id="tile1" > <a id="title2" href="/posts/get/{{ post.id }}/"> {{ post.title }} </a> </h1>
+<h1 id="tile1" > <a id="title2" href="/posts/{{ post.slugifiedtitle }}/"> {{ post.title }} </a> </h1>
 <div id= "pub_date"> <em>on</em> {{ post.pub_date }} </div>
 </div>
 
