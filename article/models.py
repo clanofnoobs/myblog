@@ -15,13 +15,13 @@ class Article(models.Model):
    def __unicode__(self):
        return self.title
    
-#class album(models.Model):
-  # image = models.ImageField(upload_to = '/', default = '/no-img.jpg')
-  # description = models.CharField(max_length=40)
+class Photo(models.Model):
+   image = models.ImageField(upload_to = "media/")
+   description = models.CharField(max_length=40)
 
 class experiments(models.Model):
    title = models.CharField(max_length=20)
-   thumbnail = models.ImageField(upload_to="/",default = '/no-image.jpg')
+   thumbnail = models.ImageField(upload_to="/")
 
    def __unicode__(self):
       return self.title

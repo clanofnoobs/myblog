@@ -1,5 +1,5 @@
 from django.contrib import admin
-from article.models import Article,experiments
+from article.models import Article,experiments,Photo
 
 #class tinymce(admin.ModelAdmin):
   # class Media:
@@ -10,4 +10,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
 #admin.site.register(Article, tinymce)
 admin.site.register(Article,ArticleAdmin)
+admin.site.register(Photo)
 admin.site.register(experiments)

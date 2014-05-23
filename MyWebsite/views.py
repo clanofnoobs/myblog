@@ -16,9 +16,6 @@ def logout(request):
    auth.logout(request)
    return redirect(request.META.get('HTTP_REFERER','/'))
 
-def photos(request):
-   return render_to_response('photos.html', context_instance=RequestContext(request))
-
 class ExperimentsView(View):
   link = ""
   

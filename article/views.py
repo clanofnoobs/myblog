@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response, redirect
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
-from article.models import Article
+from article.models import Article, Photo
 from forms import ArticleForm
 from django.template import RequestContext
 from django.contrib.auth import authenticate, login
@@ -49,6 +49,13 @@ def articles(request):
        
    
    return render_to_response('articles.html', d, context_instance=RequestContext(request))
+
+def photos(request):
+   photos = Photo.objects.all()
+   context = {'photos': photos}
+
+   return render_to_response('photos.html',context,context_instance=RequestContext(request))
+   
   
 
 def post(request, postslug):
