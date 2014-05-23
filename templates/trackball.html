@@ -29,10 +29,10 @@ Track
       var geometry = new THREE.SphereGeometry(0.5,32,32)
       // sphere
       var sphere = new THREE.Mesh(geometry,material)       //changing to lambert material
-      material.map = THREE.ImageUtils.loadTexture('/static/images/media/earth_diffuse.jpg')
-      material.bumpMap = THREE.ImageUtils.loadTexture('/static/images/media/earth_bump.jpg')
+      material.map = THREE.ImageUtils.loadTexture('/static/images/earth_diffuse.jpg')
+      material.bumpMap = THREE.ImageUtils.loadTexture('/static/images/earth_bump.jpg')
       material.bumpScale = 0.08
-      material.specularMap = THREE.ImageUtils.loadTexture('/static/images/media/earth_specular.jpg')
+      material.specularMap = THREE.ImageUtils.loadTexture('/static/images/earth_specular.jpg')
       material.specular = new THREE.Color('grey')
 
     
@@ -42,7 +42,7 @@ Track
 
       scene.add(sphere);
    var mat = new THREE.MeshPhongMaterial({
-                map : THREE.ImageUtils.loadTexture('/static/images/media/cloud1.jpg'),
+                map : THREE.ImageUtils.loadTexture('/static/images/cloud1.jpg'),
                 side: THREE.DoubleSide,
                 opacity: 0.67,
                 transparent : true,
@@ -55,7 +55,7 @@ Track
 
     var geom = new THREE.SphereGeometry(1000,32,32)
     var mate = new THREE.MeshBasicMaterial()
-    mate.map = THREE.ImageUtils.loadTexture('/static/images/media/starfield.jpg')
+    mate.map = THREE.ImageUtils.loadTexture('/static/images/starfield.jpg')
     mate.side = THREE.BackSide
     var starfield = new THREE.Mesh(geom,mate)
     scene.add(starfield)
