@@ -6,3 +6,4 @@ settings.pyc
 *.swp
 MyWebsite/.settings.py.swp
 MyWebsite/settings.py~
+media/
