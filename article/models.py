@@ -17,7 +17,7 @@ class Article(models.Model):
    
 class Photo(models.Model):
    image = models.ImageField(upload_to = "media/")
-   description = models.CharField(max_length=40)
+   description = models.CharField(max_length=150)
 
    def delete(self, *args, **kwargs):
       storage, path = self.image.storage, self.image.path
@@ -26,7 +26,7 @@ class Photo(models.Model):
 
 class experiments(models.Model):
    title = models.CharField(max_length=20)
-   thumbnail = models.ImageField(upload_to="/")
+   thumbnail = models.ImageField(upload_to="media/")
 
    def __unicode__(self):
       return self.title
