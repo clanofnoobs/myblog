@@ -19,6 +19,11 @@ class Photo(models.Model):
    image = models.ImageField(upload_to = "media/")
    description = models.CharField(max_length=40)
 
+   def delete(self, *args, **kwargs):
+      storage, path = self.image.storage, self.image.path
+      super(Photo,self).delete(*args,**kwargs)
+      storage.delete(path)
+
 class experiments(models.Model):
    title = models.CharField(max_length=20)
    thumbnail = models.ImageField(upload_to="/")
