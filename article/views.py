@@ -19,6 +19,19 @@ class JSONResponse(HttpResponse):
       kwargs['content_type'] = 'application/json'
       super(JSONResponse,self).__init__(content, **kwargs)
 
+@csrf_exempt
+def post_list(request):
+   if request.method == 'GET':
+      posts = Article.objects.all()
+      serializer = ArticleSerializer(posts,many=True)
+      return JSONResponse(serializer.data)
+   elif request.medthod == 'POST'
+      data = JSONParser().parse(request)
+      serializer = ArticleSerializer(data=data)
+      if serializer.is_valid():
+         serializer.save()
+         return JSONResponse(serializer.data, status=201)
+      return JSONResponse(serializer.errors,status=400)
 
 def projects(request):
    return render_to_response('projects.html', context_instance=RequestContext(request))
