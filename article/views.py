@@ -8,6 +8,17 @@ from django.template import RequestContext
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.context_processors import csrf
+from article.serializers import ArticleSerializer,PhotoSerializer
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.renderers import JSONRenderer
+from rest_framework.parsers import JSONParser
+
+class JSONResponse(HttpResponse):
+   def __init__(self,data,**kwargs):
+      content = JSONRenderer().render(data)
+      kwargs['content_type'] = 'application/json'
+      super(JSONResponse,self).__init__(content, **kwargs)
+
 
 def projects(request):
    return render_to_response('projects.html', context_instance=RequestContext(request))
