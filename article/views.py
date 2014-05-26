@@ -42,7 +42,7 @@ def post_detail(request,pk):
       return HttpResponse(status=404)
    if request.method == 'GET':
       serializer = ArticleSerializer(post)
-      return JSONRenderer(serializer.data)
+      return JSONResponse(serializer.data)
    elif request.method == 'PUT':
       data = JSONParser().parse(post, data=data)
       if serializer.is_valid():
