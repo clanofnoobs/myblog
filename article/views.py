@@ -26,7 +26,7 @@ def post_list(request):
       posts = Article.objects.all()
       serializer = ArticleSerializer(posts,many=True)
       return JSONResponse(serializer.data)
-   elif request.medthod == 'POST'
+   elif request.method == 'POST':
       data = JSONParser().parse(request)
       serializer = ArticleSerializer(data=data)
       if serializer.is_valid():
@@ -37,20 +37,20 @@ def post_list(request):
 @csrf_exempt
 def post_detail(request,pk):
    try:
-      snippet = Snippet.objects.get(pk=pk)
+      post = Article.objects.get(pk=pk)
    except:
       return HttpResponse(status=404)
    if request.method == 'GET':
-      serializer = ArticleSerializer(snippet)
+      serializer = ArticleSerializer(post)
       return JSONRenderer(serializer.data)
    elif request.method == 'PUT':
-      data = JSONParser().parse(snippet, data=data)
+      data = JSONParser().parse(post, data=data)
       if serializer.is_valid():
          serializer.save()
          return JSONResponse(serializer.data)
       return JSONResponse(serializer.errors, status=400)
    elif request.method == 'DELETE':
-      snippet.delete()
+      post.delete()
       return HttpResponse(status=204)
 
 def projects(request):

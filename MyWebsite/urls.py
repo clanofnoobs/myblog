@@ -26,6 +26,9 @@ urlpatterns = patterns('',
     url(r'^lighting/$', ExperimentsView.as_view(link="lighting.html")),
     url(r'^sphere/$', ExperimentsView.as_view(link="sphere.html")),
     url(r'^trackball/$', ExperimentsView.as_view(link="trackball.html")),
+    url(r'^blogposts/$', 'article.views.post_list'),
+    url(r'^blogposts/(?P<pk>[0-9]+)/$', 'article.views.post_detail'),
+
 
     # Examples:
     # url(r'^$', 'MyWebsite.views.home', name='home'),
