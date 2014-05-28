@@ -15,19 +15,18 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators import api_view
 
 
-@csrf_exempt
+@api_view(['GET'],'POST'])
 def post_list(request):
    if request.method == 'GET':
       posts = Article.objects.all()
       serializer = ArticleSerializer(posts,many=True)
-      return JSONResponse(serializer.data)
+      return Response(serializer.data)
    elif request.method == 'POST':
-      data = JSONParser().parse(request)
-      serializer = ArticleSerializer(data=data)
+      serializer = ArticleSerializer(data=request.DATA)
       if serializer.is_valid():
          serializer.save()
-         return JSONResponse(serializer.data, status=201)
-      return JSONResponse(serializer.errors,status=400)
+         return Response(serializer.data, status=status.HTTP_201_CREATED)
+      return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
 @csrf_exempt
 def post_detail(request,pk):
