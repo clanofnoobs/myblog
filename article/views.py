@@ -12,12 +12,7 @@ from article.serializers import ArticleSerializer,PhotoSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-
-class JSONResponse(HttpResponse):
-   def __init__(self,data,**kwargs):
-      content = JSONRenderer().render(data)
-      kwargs['content_type'] = 'application/json'
-      super(JSONResponse,self).__init__(content, **kwargs)
+from django.views.decorators import api_view
 
 
 @csrf_exempt
