@@ -16,7 +16,7 @@ from django.views.decorators import api_view
 
 
 @api_view(['GET'],'POST'])
-def post_list(request):
+def post_list(request,format=None):
    if request.method == 'GET':
       posts = Article.objects.all()
       serializer = ArticleSerializer(posts,many=True)
@@ -29,7 +29,7 @@ def post_list(request):
       return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT','DELETE'])
-def post_detail(request,pk):
+def post_detail(request,pk,format=None):
    try:
       post = Article.objects.get(pk=pk)
    except Post.DoesNotExist:
