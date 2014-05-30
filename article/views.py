@@ -12,10 +12,11 @@ from article.serializers import ArticleSerializer,PhotoSerializer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from django.views.decorators import api_view
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
-@api_view(['GET'],'POST'])
+@api_view(['GET','POST'])
 def post_list(request,format=None):
    if request.method == 'GET':
       posts = Article.objects.all()
